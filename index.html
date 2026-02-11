@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>DApp ArmazenaNumero</title>
+
+
+<!-- Importa o ethers.js a partir de um CDN -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+<h1>DApp ArmazenaNumero</h1>
+
+<div class="container">
+	<button id="btnConectar">Conectar MetaMask</button>
+	<p>Conta conectada: <span id="conta"></span></p>
+	<p>Total de taxas de transação gastas por você neste contrato: <span id="taxasGastas">0.000000</span> ETH</p>
+	<hr />
+	<input type="number" id="novoNumero" placeholder="Novo número" />
+	<button id="btnDefinir">Definir número</button>
+	<p>Número atual: <span id="numeroAtual"></span></p>
+	<p>Último usuário que definiu o número: <span id="ultimoUsuario"></span></p>
+</div>
+
+<style>
+body {
+	background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+	font-family: 'Segoe UI', Arial, sans-serif;
+	margin: 0;
+	min-height: 100vh;
+}
+h1 {
+	text-align: center;
+	color: #3730a3;
+	margin-top: 32px;
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+}
+.container {
+	background: #fff;
+	max-width: 480px;
+	margin: 32px auto 0 auto;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px 0 #3730a320;
+	padding: 32px 28px 28px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+button {
+	background: #6366f1;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 22px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-left: 6px;
+}
+button:disabled {
+	background: #a5b4fc;
+	cursor: not-allowed;
+}
+input[type="number"] {
+	padding: 8px 12px;
+	border: 1px solid #c7d2fe;
+	border-radius: 8px;
+	font-size: 1rem;
+	width: 160px;
+	margin-right: 6px;
+}
+p {
+	margin: 0;
+	color: #373737;
+	font-size: 1.08rem;
+}
+hr {
+	border: none;
+	border-top: 1.5px solid #e0e7ff;
+	margin: 12px 0 12px 0;
+}
+#numeroAtual {
+	font-weight: bold;
+	color: #6366f1;
+	font-size: 1.2rem;
+}
+#ultimoUsuario {
+	font-family: 'Fira Mono', 'Consolas', monospace;
+	color: #7c3aed;
+	font-size: 1rem;
+}
+#taxasGastas {
+	color: #059669;
+	font-weight: bold;
+}
+</style>
+
+<script src="app.js"></script>
+</body>
+</html>
