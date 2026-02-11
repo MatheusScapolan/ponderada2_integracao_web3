@@ -280,5 +280,8 @@ A aplicação frontend possui:
 - O endereço deve ter 42 caracteres (incluindo o 0x)
 
 ## Autor:
+
+Matheus Scapolan
+
 - [Linkedin](https://www.linkedin.com/in/matheusscapolan/)
 - [GitHub](https://github.com/MatheusScapolan)
